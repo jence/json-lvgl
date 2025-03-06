@@ -1,0 +1,340 @@
+{
+    "@screen": {
+        "type": "screen",
+        "name": "ui_mainScreen",
+        "theme": {},
+        "@container": {
+            "type": "container",
+            "name": "left_iconContainer",
+            "flex_flow": "row",
+            "flex_align": "start",
+            "align": "top_mid",
+            "clear_flag": "scrollable",
+            "style": {
+                "width": 160,
+                "height": 25,
+                "bg_color": "0xB4E2FF",
+                "pad_all": 5
+            },
+            "@button": {
+                "name": "settings_btn",
+                "type": "button",
+                "radius": 8,
+                "click_area": 20,
+                "event": {
+                    "name": "ui_settings_btn_cb",
+                    "code": "LV_EVENT_CLICKED",
+                    "@screen": {
+                        "@container": {
+                            "type": "container",
+                            "name": "settings_bottom_container",
+                            "flex_flow": "row",
+                            "flex_align": "start",
+                            "align": "bottom_mid",
+                            "clear_flag": "scrollable",
+                            "style": {
+                                "width": 320,
+                                "height": 25,
+                                "bg_color": "0xB4E2FF",
+                                "pad_all": 5
+                            },
+                            "@button": {
+                                "name": "home_btn",
+                                "type": "button",
+                                "radius": 8,
+                                "click_area": 20,
+                                "event": {
+                                    "name": "ui_home_btn_cb",
+                                    "code": "LV_EVENT_CLICKED",
+                                    "@screen": {}
+                                },
+                                "@label": {
+                                    "type": "label",
+                                    "name": "home_label",
+                                    "icon": "home",
+                                    "align": "center"
+                                }
+                            }
+                        },
+                        "@list": {
+                            "name": "settings_list",
+                            "type": "dropdown_list",
+                            "options": "Menu\nSettings\nUHF\nNFC\nBanana\nRaspberry\nOrange",
+                            "align": "top_mid",
+                            "event": {
+                                "name": "dropdown_list_cb",
+                                "code": "LV_EVENT_VALUE_CHANGED",
+                                "@screen": {}
+                            }
+                        }
+                    }
+                },
+                "@label": {
+                    "type": "label",
+                    "name": "settings_label",
+                    "icon": "settings",
+                    "align": "center"
+                }
+            },
+            "@label": {
+                "type": "label",
+                "name": "time_label",
+                "text": "syncTime."
+            }
+        },
+        "@container": {
+            "type": "container",
+            "name": "bottom_container",
+            "align": "bottom_mid",
+            "clear_flag": "scrollable",
+            "style": {
+                "width": 320,
+                "height": 25,
+                "bg_color": "0xB4E2FF",
+                "pad_all": 2
+            }
+        },
+        "@button": {
+            "type": "button",
+            "name": "filter_btn",
+            "width": 12,
+            "height": 9,
+            "x": -31,
+            "y": 44,
+            "align": "center",
+            "add_flag": "scroll_on_focus",
+            "clear_flag": "scrollable",
+            "radius": 15,
+            "bg_color": "0xFFFFFF",
+            "bg_opa": 255,
+            "border_color": "0x81CCD5",
+            "border_opa": 255,
+            "border_width": 2,
+            "click_area": 20,
+            "event": {
+                "name": "ui_settings_btn_cb",
+                "code": "LV_EVENT_CLICKED",
+                "@screen": {
+                    "@container": {
+                        "type": "container",
+                        "name": "filter_bottom_container",
+                        "flex_flow": "row",
+                        "flex_align": "start",
+                        "align": "bottom_mid",
+                        "clear_flag": "scrollable",
+                        "style": {
+                            "width": 320,
+                            "height": 25,
+                            "bg_color": "0xB4E2FF",
+                            "pad_all": 5
+                        },
+                        "@button": {
+                            "name": "home_btn",
+                            "type": "button",
+                            "radius": 8,
+                            "click_area": 20,
+                            "event": {
+                                "name": "ui_home_btn_cb",
+                                "code": "LV_EVENT_CLICKED",
+                                "@screen": {}
+                            },
+                            "@label": {
+                                "type": "label",
+                                "name": "home_label",
+                                "icon": "trash",
+                                "align": "center"
+                            }
+                        }
+                    }
+                }
+            },
+            "@label": {
+                "type": "label",
+                "name": "filter_label",
+                "width": 1,
+                "height": 1,
+                "align": "center",
+                "text": "F:0",
+                "text_color": "0x000000",
+                "text_opa": 255
+            }
+        },
+        "@button": {
+            "type": "button",
+            "name": "merge_btn",
+            "width": 11,
+            "height": 9,
+            "x": -43,
+            "y": 44,
+            "align": "center",
+            "add_flag": "clickable",
+            "clear_flag": "scrollable",
+            "radius": 15,
+            "bg_color": "0xFFFFFF",
+            "bg_opa": 255,
+            "border_color": "0x81CCD5",
+            "border_opa": 255,
+            "border_width": 2,
+            "click_area": 20,
+            "event": {
+                "name": "ui_settings_btn_cb",
+                "code": "LV_EVENT_CLICKED",
+                "@screen": {
+                    "@container": {
+                        "type": "container",
+                        "name": "merge_bottom_container",
+                        "flex_flow": "row",
+                        "flex_align": "start",
+                        "align": "bottom_mid",
+                        "clear_flag": "scrollable",
+                        "style": {
+                            "width": 320,
+                            "height": 25,
+                            "bg_color": "0xB4E2FF",
+                            "pad_all": 5
+                        },
+                        "@button": {
+                            "name": "home_btn",
+                            "type": "button",
+                            "radius": 8,
+                            "click_area": 20,
+                            "event": {
+                                "name": "ui_home_btn_cb",
+                                "code": "LV_EVENT_CLICKED",
+                                "@screen": {}
+                            },
+                            "@label": {
+                                "type": "label",
+                                "name": "home_label",
+                                "icon": "home",
+                                "align": "center"
+                            }
+                        }
+                    }
+                }
+            },
+            "@label": {
+                "type": "label",
+                "name": "merge_label",
+                "width": 1,
+                "height": 1,
+                "align": "center",
+                "text": "M:0",
+                "text_color": "0x000000",
+                "text_opa": 255
+            }
+        },
+        "@button": {
+            "type": "button",
+            "name": "agent_btn",
+            "width": 13,
+            "height": 9,
+            "x": -18,
+            "y": 44,
+            "align": "center",
+            "add_flag": "scroll_on_focus",
+            "clear_flag": "scrollable",
+            "radius": 15,
+            "bg_color": "0xFFFFFF",
+            "bg_opa": 255,
+            "border_color": "0x81CCD5",
+            "border_opa": 255,
+            "border_width": 2,
+            "click_area": 20,
+            "event": {
+                "name": "ui_event_agent_btn_cb",
+                "code": "LV_EVENT_CLICKED",
+                "@screen": {
+                    "@container": {
+                        "type": "container",
+                        "name": "agent_bottom_container",
+                        "flex_flow": "row",
+                        "flex_align": "start",
+                        "align": "bottom_mid",
+                        "clear_flag": "scrollable",
+                        "style": {
+                            "width": 320,
+                            "height": 25,
+                            "bg_color": "0xB4E2FF",
+                            "pad_all": 5
+                        },
+                        "@button": {
+                            "name": "home_btn",
+                            "type": "button",
+                            "radius": 8,
+                            "click_area": 20,
+                            "event": {
+                                "name": "ui_home_btn_cb",
+                                "code": "LV_EVENT_CLICKED",
+                                "@screen": {}
+                            },
+                            "@label": {
+                                "type": "label",
+                                "name": "home_label",
+                                "icon": "home",
+                                "align": "center"
+                            }
+                        }
+                    },
+                    "@container": {
+                        "type": "container",
+                        "name": "agent_top_container",
+                        "flex_flow": "row",
+                        "flex_align": "end",
+                        "clear_flag": "scrollable",
+                        "style": {
+                            "width": 320,
+                            "height": 25,
+                            "bg_color": "0xB4E2FF",
+                            "pad_all": 5
+                        },
+                        "@label": {
+                            "type": "label",
+                            "name": "battery_label",
+                            "icon": "battery_empty",
+                            "add_flag": "clickable"
+                        },
+                        "@label": {
+                            "type": "label",
+                            "name": "wifi_label",
+                            "add_flag": "clickable",
+                            "icon": "wifi"
+                        }
+                    },
+                    "list": {
+                        "type": "list",
+                        "name": "agent_list",
+                        "options": "Agent\nNew\nOld\nunknown",
+                        "align": "center",
+                        "event": {
+                            "name": "dropdown_list_cb",
+                            "code": "LV_EVENT_VALUE_CHANGED",
+                            "@screen": {}
+                        }
+                    }
+                }
+            },
+            "@label": {
+                "type": "label",
+                "name": "agent_label",
+                "align": "center",
+                "width": 1,
+                "height": 1,
+                "text": "agent",
+                "text_color": "0x000000",
+                "text_opa": 255
+            }
+        },
+        "list": {
+            "type": "list",
+            "name": "home_list",
+            "options": "LVGL\nHTML\nCSS\nunknown",
+            "align": "mid_left",
+            "event": {
+                "name": "dropdown_list_cb",
+                "code": "LV_EVENT_VALUE_CHANGED",
+                "@screen": {}
+            }
+        }
+    }
+}
